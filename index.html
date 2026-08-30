@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>I am so sorry, Aakruti 🥺</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Sorry Aakruti! 🥺</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <style>
@@ -27,11 +27,11 @@
 
     .card {
       background: #ffffff;
-      max-width: 550px;
+      max-width: 480px;
       width: 100%;
       border-radius: 24px;
-      padding: 36px 24px;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+      padding: 30px 20px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -48,45 +48,34 @@
     }
 
     .emoji-header {
-      font-size: 3.2rem;
-      margin-bottom: 10px;
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+      font-size: 3rem;
+      margin-bottom: 8px;
     }
 
     h1 {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       font-weight: 700;
-      color: #2c3e50;
-      margin-bottom: 12px;
+      color: #1f2937;
+      margin-bottom: 6px;
     }
 
-    .letter {
-      background: #fafafa;
-      border: 1px dashed #dcdfe6;
-      border-radius: 16px;
-      padding: 16px;
-      margin: 18px 0;
+    .short-msg {
       font-size: 0.95rem;
-      line-height: 1.6;
       color: #4b5563;
-      text-align: left;
+      margin-bottom: 18px;
+      line-height: 1.5;
     }
 
     .multiplier-box {
       background: #fdf2f8;
-      border: 1px solid #fbcfe8;
+      border: 1px dashed #f472b6;
       border-radius: 16px;
-      padding: 16px;
-      margin: 18px 0;
+      padding: 14px;
+      margin-bottom: 18px;
     }
 
     .multiplier-box p {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: #831843;
       font-weight: 600;
       margin-bottom: 10px;
@@ -94,16 +83,16 @@
 
     .input-row {
       display: flex;
-      gap: 10px;
+      gap: 8px;
       justify-content: center;
     }
 
     .input-row input {
-      width: 130px;
-      padding: 10px 14px;
+      width: 110px;
+      padding: 8px 12px;
       border: 1.5px solid #f472b6;
-      border-radius: 12px;
-      font-size: 1rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
       text-align: center;
       outline: none;
     }
@@ -112,70 +101,59 @@
       background: #ec4899;
       color: white;
       border: none;
-      padding: 10px 18px;
-      border-radius: 12px;
+      padding: 8px 16px;
+      border-radius: 10px;
       font-weight: 600;
       cursor: pointer;
-      transition: 0.2s ease;
-    }
-
-    .input-row button:hover {
-      background: #db2777;
     }
 
     .sorry-stream {
-      max-height: 150px;
+      max-height: 120px;
       overflow-y: auto;
       text-align: left;
-      margin-top: 12px;
-      font-size: 0.85rem;
+      margin-top: 10px;
+      font-size: 0.82rem;
       color: #9d174d;
       background: #ffffff;
-      padding: 10px;
-      border-radius: 10px;
+      padding: 8px 12px;
+      border-radius: 8px;
       border: 1px solid #fce7f3;
       display: none;
-      line-height: 1.5;
+      line-height: 1.4;
     }
 
     .question {
-      font-size: 1.05rem;
+      font-size: 0.98rem;
       font-weight: 600;
-      margin: 16px 0;
+      margin-bottom: 16px;
       color: #374151;
     }
 
     .btn-group {
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 12px;
       position: relative;
-      min-height: 52px;
+      min-height: 48px;
     }
 
     .btn-yes {
       background: linear-gradient(135deg, #6366f1, #8b5cf6);
       color: #fff;
-      padding: 12px 26px;
-      font-size: 0.95rem;
+      padding: 10px 22px;
+      font-size: 0.92rem;
       font-weight: 600;
       border-radius: 50px;
       border: none;
       cursor: pointer;
-      box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
-      transition: transform 0.15s ease;
-    }
-
-    .btn-yes:hover {
-      transform: scale(1.05);
     }
 
     .btn-no {
       background: #f3f4f6;
       color: #6b7280;
       border: 1px solid #e5e7eb;
-      padding: 12px 26px;
-      font-size: 0.95rem;
+      padding: 10px 22px;
+      font-size: 0.92rem;
       font-weight: 600;
       border-radius: 50px;
       cursor: pointer;
@@ -184,7 +162,7 @@
 
     .celebration {
       display: none;
-      animation: fadeIn 0.5s ease forwards;
+      animation: fadeIn 0.4s ease forwards;
     }
 
     @keyframes fadeIn {
@@ -197,37 +175,36 @@
 
   <div class="card" id="mainCard">
     <div id="apologyContent">
-      <div class="emoji-header">🥺👉👈</div>
-      <h1>I'm so sorry, Aakruti!</h1>
+      <div class="emoji-header">🥺🩹</div>
+      <h1>My bad, Aakruti!</h1>
+      <p class="short-msg">
+        I know I was annoying and messed up. Please drop the anger now, your grumpy face doesn't suit you at all.
+      </p>
 
-      <div class="letter">
-        <p>Hey <strong>Aakruti</strong>,</p><br>
-        <p>I know I messed up, and I genuinely feel terrible about it. Hurting you was the last thing I ever wanted to do.</p><br>
-        <p>You are one of my closest friends and your friendship means the world to me. I'm ready to apologize as many times as it takes to make things right.</p>
-      </div>
-
+      <!-- Multiplier Box -->
       <div class="multiplier-box">
-        <p>How many times do you want me to say sorry? 📝</p>
+        <p>How many "sorry"s to fix your mood? Enter below 👇</p>
         <div class="input-row">
           <input type="number" id="sorryCount" placeholder="e.g. 50" min="1" max="10000" />
-          <button onclick="generateSorries()">Send Sorries</button>
+          <button onclick="generateSorries()">Spam Me</button>
         </div>
         <div class="sorry-stream" id="sorryStream"></div>
       </div>
 
-      <p class="question">Will you forgive me? 🤝</p>
+      <p class="question">Are we good now? 🤝</p>
 
-      <div class="btn-group" id="buttonArea">
-        <button class="btn-yes" id="yesBtn" onclick="acceptApology()">Yes, you're forgiven ❤️</button>
-        <button class="btn-no" id="noBtn" onmouseover="dodgeButton()" onclick="dodgeButton()">No 😤</button>
+      <div class="btn-group">
+        <button class="btn-yes" onclick="acceptApology()">Fine, forgiven ❤️</button>
+        <button class="btn-no" id="noBtn" onmouseover="dodgeButton()" onclick="dodgeButton()">Still mad 😤</button>
       </div>
     </div>
 
+    <!-- Screen shown when she clicks Yes -->
     <div class="celebration" id="celebrationScreen">
       <div class="emoji-header">🥳🎉✨</div>
-      <h2 style="color: #4f46e5; margin-bottom: 12px;">Thank You, Aakruti!</h2>
-      <p style="color: #4b5563; line-height: 1.6;">
-        You're the absolute best. I promise not to let you down again. Let's talk soon! 🍕❤️
+      <h2 style="color: #4f46e5; margin-bottom: 8px;">Yay! Mood fixed!</h2>
+      <p style="color: #4b5563; font-size: 0.95rem;">
+        Thanks for not staying mad. Treat's on me next time! 🍕🤝
       </p>
     </div>
   </div>
@@ -235,14 +212,13 @@
   <script>
     const noBtn = document.getElementById('noBtn');
 
-    // Runaway "No" button logic
     function dodgeButton() {
       const card = document.getElementById('mainCard');
       const cardRect = card.getBoundingClientRect();
       const btnRect = noBtn.getBoundingClientRect();
 
-      const maxX = (cardRect.width / 2) - (btnRect.width / 2) - 20;
-      const maxY = 120;
+      const maxX = (cardRect.width / 2) - (btnRect.width / 2) - 15;
+      const maxY = 80;
 
       const randomX = (Math.random() * (maxX * 2)) - maxX;
       const randomY = (Math.random() * (maxY * 2)) - maxY;
@@ -250,42 +226,31 @@
       noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
     }
 
-    // Generate repeated apologies
     function generateSorries() {
       const countInput = document.getElementById('sorryCount');
       const stream = document.getElementById('sorryStream');
       const count = parseInt(countInput.value, 10);
 
-      if (isNaN(count) || count <= 0) {
-        alert("Please enter a valid number!");
-        return;
-      }
+      if (isNaN(count) || count <= 0) return;
 
-      // Cap rendering at 5,000 to prevent browser lag
       const safeCount = Math.min(count, 5000);
-      let apologies = [];
+      let list = [];
 
       for (let i = 1; i <= safeCount; i++) {
-        apologies.push(`${i}. I'm really sorry, Aakruti! 🥺`);
+        list.push(`${i}. Sorry Aakruti! 🥺`);
       }
 
       if (count > 5000) {
-        apologies.push(`...and ${count - 5000} more times! (Infinity Sorries ❤️)`);
+        list.push(`...and ${count - 5000} more! (Infinite sorry)`);
       }
 
-      stream.innerHTML = apologies.join('<br>');
+      stream.innerHTML = list.join('<br>');
       stream.style.display = 'block';
       stream.scrollTop = stream.scrollHeight;
     }
 
-    // Accept Apology
     function acceptApology() {
-      confetti({
-        particleCount: 120,
-        spread: 80,
-        origin: { y: 0.6 }
-      });
-
+      confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
       document.getElementById('apologyContent').style.display = 'none';
       document.getElementById('celebrationScreen').style.display = 'block';
     }
